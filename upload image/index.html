@@ -1,0 +1,30 @@
+<html>
+
+<head>
+	<title>Upload Image</title>
+	<script src="./js.js"></script>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<label>
+			<input onchange="handelSelectImage(this)" type="file" />
+			<div id="beforeSelect" class="beforeSelect">
+				<div class="beforeSelect-inner">
+					<span>عکس موردنظر را انتخاب کنید</span>
+					<img src="./upload.png" style="width: 50px;margin-top: 10px;" />
+				</div>
+			</div>
+			<div id="selected" class="selected" style="display: none;">
+				<img id="selectedImage" />
+				<button onclick="handelRemove()" class="btn-remove">حذف</button>
+			</div>
+		</label>
+	</div>
+
+</body>
+
+</html>

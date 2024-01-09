@@ -1,0 +1,105 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #fff;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.btn-open {
+  width: 150px;
+  height: 40px;
+  background: green;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:none;
+  cursor: pointer;
+}
+
+
+.drawer-cover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 100%;
+  background: #00000098;
+  transition: all 0.6s;
+  z-index: 5;
+}
+
+.drawer-cover-active {
+  bottom: 0;
+  transition: all 0.6s;
+}
+
+.drawer {
+  position: fixed;
+  height: 350px;
+  background: #e0e0e0;
+  border-radius: 30px 30px 0 0;
+  left: 0;
+  right: 0;
+  bottom: -350px;
+  transition: all 0.6s;
+  transition-delay: 0.6s;
+  z-index: 10;
+}
+
+.drawer-active {
+  bottom: 0;
+  transition: all 0.6s;
+  transition-delay: 0.6s;
+}
+
+
+
+
+.drawer {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.drawer button {
+  width: 100%;
+  height: 40px;
+  background: tomato;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 50px;
+  cursor: pointer;
+}

@@ -1,0 +1,135 @@
+<html>
+
+<head>
+	<title>Ehsan Aghahoseini - Slider</title>
+	<script src="./js/js.js"></script>
+	<meta charset="utf-8" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<link rel="stylesheet" type="text/css" href="static/style/global.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+	<section class="w-full h-full flex items-center  md:pt-0 pt-[70px] relative overflow-hidden">
+
+
+		<img src="./img/1.jpg" alt="slider"
+			class="sliderImage w-full h-full object-cover absolute left-0 right-0 top-0 bottom-0 transition-all delay-200 opacity-0 invisible "
+			style="transform: scale(0); transition-duration: 2000ms " />
+		<img src="./img/2.jpg" alt="slider"
+			class="sliderImage w-full h-full object-cover absolute left-0 right-0 top-0 bottom-0 transition-all delay-200 opacity-0 invisible "
+			style=" transform: scale(0); transition-duration: 2000ms " />
+		<img src="./img/3.jpg" alt="slider"
+			class="sliderImage w-full h-full object-cover absolute left-0 right-0 top-0 bottom-0 transition-all delay-200 opacity-100 visible "
+			style=" transform: scale(1); transition-duration: 2000ms " />
+
+
+		<div class="  absolute bottom-10 right-10 flex items-center justify-between">
+			<button onclick="handelStartChangeSlider('next')"
+				class="w-[50px] h-[30px] bg-[#00000072] flex items-center justify-center mx-1">
+				<img src="./static/svg/arrow.svg" class="w-[30px] rotate-180" />
+			</button>
+			<button onclick="handelStartChangeSlider('prev')"
+				class="w-[50px] h-[30px] bg-[#00000072] flex items-center justify-center mx-1">
+				<img src="./static/svg/arrow.svg" class="w-[30px]" />
+			</button>
+		</div>
+
+
+		<div
+			class="max-w-[500px] w-full h-[340px] md:ml-[100px] mx-auto flex flex-col  z-[3] overflow-hidden relative p-2 ">
+			<div class="sliderTitle flex flex-col text-[77px] text-white absolute transition-all duration-[2000ms] "
+				style="left:1000px">
+				<div class="flex items-center">
+					<span class="">E</span>
+					<span class="">H</span>
+					<span class="">S</span>
+					<span class="">A</span>
+					<span class="">N</span>
+				</div>
+				<div class="flex items-center">
+					<span class="">A</span>
+					<span class="">G</span>
+					<span class="">H</span>
+					<span class="">A</span>
+					<span class="">H</span>
+					<span class="">O</span>
+					<span class="">S</span>
+					<span class="">E</span>
+					<span class="">I</span>
+					<span class="">N</span>
+					<span class="">I</span>
+				</div>
+			</div>
+
+			<div class="sliderTitle flex flex-col text-[77px] text-white absolute transition-all duration-[2000ms] "
+				style="left:1000px">
+				<div class="flex items-center">
+					<span class="">E</span>
+					<span class="">H</span>
+					<span class="">S</span>
+					<span class="">A</span>
+					<span class="">N</span>
+				</div>
+				<div class="flex items-center">
+					<span class="">A</span>
+					<span class="">G</span>
+					<span class="">H</span>
+					<span class="">A</span>
+					<span class="">H</span>
+					<span class="">O</span>
+					<span class="">S</span>
+					<span class="">E</span>
+					<span class="">I</span>
+					<span class="">N</span>
+					<span class="">I</span>
+				</div>
+			</div>
+
+			<div class="sliderTitle flex flex-col text-[77px] text-white absolute transition-all duration-[2000ms] "
+				style="left:1000px">
+				<div class="flex items-center">
+					<span class="">E</span>
+					<span class="">H</span>
+					<span class="">S</span>
+					<span class="">A</span>
+					<span class="">N</span>
+				</div>
+				<div class="flex items-center">
+					<span class="">A</span>
+					<span class="">G</span>
+					<span class="">H</span>
+					<span class="">A</span>
+					<span class="">H</span>
+					<span class="">O</span>
+					<span class="">S</span>
+					<span class="">E</span>
+					<span class="">I</span>
+					<span class="">N</span>
+					<span class="">I</span>
+				</div>
+			</div>
+
+
+			<span class="sliderDescription text-white absolute transition-all duration-[2000ms] bottom-2 ">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua
+			</span>
+			<span class="sliderDescription  text-white absolute transition-all duration-[2000ms] bottom-[-200px] ">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua
+			</span>
+			<span class="sliderDescription text-white absolute transition-all duration-[2000ms] bottom-[-200px] ">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua
+			</span>
+
+
+
+		</div>
+
+
+	</section>
+</body>
+
+</html>

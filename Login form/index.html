@@ -1,17 +1,102 @@
 <html>
 
 <head>
-	<title>Login form</title>
+	<title>Ehsan Aghahoseini - Login form</title>
 	<script src="./js.js"></script>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="./global.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="w-full h-screen flex items-center justify-center bg-gray-100">
 
-	<div class="container">
-		<div class="cover"></div>
-	</div>
+	<section class="w-[800px] ">
+		<div class="w-full flex items-center">
+			<div class='w-full  md:h-[600px] h-full   bg-white flex flex-wrap overflow-hidden rounded-md'>
+				<div class='w-full md:w-6/12 h-full relative md:flex hidden overflow-hidden '>
+					<span class='absolute bg-[#00000062] left-0 right-0 bottom-0 top-0  z-[2]'></span>
+					<img id='coverLogin' src="./1.jpg" class='w-full h-full object-cover object-center absolute
+						transition-all duration-700  z-[1] top-0 opacity-100' alt='auth' />
+					<img id='coverRegister' src="./2.avif" class='w-full h-full object-cover object-center absolute
+						transition-all duration-700 z-[-1] top-[-20px] opacity-0' alt='auth' />
+				</div>
+				<div class='w-full md:w-6/12 h-full p-[20px]'>
+					<div class='w-full flex flex-col m-auto max-w-[400px] '>
+						<div class='w-full flex flex-col items-center justify-center '>
+							<span class='my-2'>Welcome to WebEhsan</span>
+							<div
+								class="w-[200px] h-10 flex items-center justify-between rounded-full border shadow mt-4 p-1">
+								<button id='btnLogin' onclick="handelForm('login')" type="button" class='w-full h-full
+									bg-pos-100 rounded-full flex items-center justify-center transition-all text-xs
+									bg-green-500 text-white '>Login</button>
+								<button id='btnRegister' onclick="handelForm('register')" type="button"
+									class='w-full h-full bg-pos-100 rounded-full flex items-center justify-center transition-all text-xs text-black '>Register</button>
+							</div>
+						</div>
+					</div>
+					<div class="w-full  flex flex-col relative overflow-hidden">
+
+						<form id="loginForm" class='w-full flex flex-col pt-[30px] '>
+							<div class="w-full flex flex-col">
+								<span class="text-xs mb-2 text-gray-500 ml-2
+									">Email Address</span>
+								<input name="email" type="text" placeholder="Enter your email "
+									class="w-full h-10 rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+									required />
+							</div>
+							<div class="w-full flex flex-col mt-5">
+								<span class="text-xs mb-2 text-gray-500 ml-2 ">Password</span>
+								<input name='password' type="password" placeholder="min.8 char  "
+									class="w-full h-10 rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+									required />
+							</div>
+							<button type="submit"
+								class="w-full h-10 bg-green-500 text-white text-sm rounded-full mt-10">Submit</button>
+							<div class="w-full flex flex-col mt-10">
+								<div class="w-full relative border-t flex justify-center ">
+									<span class="bg-white -mt-[14px] flex w-10 justify-center">or</span>
+								</div>
+								<div class="w-full flex items-center justify-between mt-4 text-xs px-2">
+									<span class="cursor-pointer">Do you have an account ?</span>
+									<span class="text-blue-500 cursor-pointer">forget password ?</span>
+								</div>
+							</div>
+						</form>
+
+						<form id="registerForm" class="w-full  flex-col pt-[20px] hidden">
+							<div class="w-full flex flex-col">
+								<span class="text-xs mb-2 text-gray-500 ml-2 ">Name</span>
+								<input name='name' type="text" placeholder="Enter your name "
+									class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+									required />
+							</div>
+							<div class="w-full flex flex-col mt-5">
+								<span class="text-xs mb-2 text-gray-500 ml-2 ">Family</span>
+								<input name='last_name' type="text" placeholder="Enter your family "
+									class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+									required />
+							</div>
+							<div class="w-full flex flex-col mt-5">
+								<span class="text-xs mb-2 text-gray-500 ml-2 ">Email Address</span>
+								<input name='email' type="text" placeholder="Enter your email "
+									class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+									required />
+							</div>
+							<div class="w-full flex flex-col mt-5">
+								<span class="text-xs mb-2 text-gray-500 ml-2 ">Password</span>
+								<input name='password' type="password" placeholder="min.8 char  "
+									class="w-full h-[40px] rounded-full border border-gray-300 px-[10px] focus:outline-none text-sm"
+									required />
+							</div>
+							<button type="submit"
+								class="w-full h-[40px] bg-green-500 text-white text-sm rounded-full mt-10">Submit</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 </body>
 

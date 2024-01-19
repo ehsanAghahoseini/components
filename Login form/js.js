@@ -7,9 +7,9 @@ const handelForm = (type) => {
     let loginForm = document.getElementById('loginForm')
     
     if (type == 'login') {
-        btnLogin.classList.add('bg-green-500')
+        btnLogin.classList.add('bg-blue-500')
         btnLogin.classList.add('text-white')
-        btnRegister.classList.remove('bg-green-500')
+        btnRegister.classList.remove('bg-blue-500')
         btnRegister.classList.remove('text-white')
 
         coverLogin.classList.add('z-[1]')
@@ -32,9 +32,9 @@ const handelForm = (type) => {
         registerForm.classList.remove('flex')
     }
     else {
-        btnRegister.classList.add('bg-green-500')
+        btnRegister.classList.add('bg-blue-500')
         btnLogin.classList.remove('text-white')
-        btnLogin.classList.remove('bg-green-500')
+        btnLogin.classList.remove('bg-blue-500')
         btnRegister.classList.add('text-white')
 
         coverRegister.classList.add('z-[1]')

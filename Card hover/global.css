@@ -1,0 +1,48 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background: #fff;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+
+.front {
+  transform: rotateY(0);
+  transition: all .75s ease-in-out;
+  perspective: 1000px;
+  transform-style:preserve-3d;
+  backface-visibility:hidden ;
+}
+
+.parent:hover .front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  transform: rotateY(-180deg);
+  perspective: 1000px;
+  transform-style:preserve-3d;
+  backface-visibility:hidden ;
+  transition: all .75s ease-in-out;
+}
+
+.parent:hover .back {
+  transform: rotateY(0);
+}

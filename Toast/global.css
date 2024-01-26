@@ -1,0 +1,90 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+
+body {
+  scroll-behavior: smooth;
+  background: #e0e0e0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+button {
+  width: 170px;
+  height: 40px;
+  background: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  border:none;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toast {
+  width: 300px;
+  height: 65px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 4px solid #252525;
+  position: absolute;
+  top: 20px;
+  right: -500px;
+  transition: all 0.5s;
+}
+
+.toast-active {
+  right: 20px;
+  transition: all 0.5s;
+}
+
+
+.toast span {
+  margin: 0 5px;
+}
+
+
+.loader {
+  width: 28px;
+  height: 28px;
+  border: 5px dotted #252525;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 

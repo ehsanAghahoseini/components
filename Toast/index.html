@@ -1,0 +1,32 @@
+<html>
+
+<head>
+	<title>Ehsan Aghahoseini - Snackbar / Toast</title>
+	<script src="./js.js"></script>
+	<meta charset="utf-8" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+
+	<button onclick="showToast()">Show Notification</button>
+
+	<div id="toast" class="toast">
+		<span class="loader"></span>
+		<span>Lorem ipsum dolor sit amet</span>
+	</div>
+
+	<script>
+		const showToast = () => {
+			const toast = document.getElementById('toast');
+			toast.classList.add('toast-active')
+			setTimeout(() => {
+				toast.classList.remove('toast-active')
+			}, 2000);
+		}
+	</script>
+
+</body>
+
+</html>

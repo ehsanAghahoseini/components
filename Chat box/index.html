@@ -9,10 +9,51 @@
 </head>
 
 <body>
-	<button class="btn-start">
-		<img src="./chat.png" />
+	<button id="btn-start" onclick="handelVisibility()" class="btn-start">
+		<img id="chat-img" src="./chat.svg" />
 	</button>
-	<div class="chat-box"></div>
+	<div id='chat-box' class="chat-box">
+		<div class="chat-box-head">
+			<img src="./profile.jpg" />
+			<span>@WebEhsan</span>
+		</div>
+		<div id="cont" class="chat-box-cont">
+		</div>
+		<form onsubmit="submitform()" class="chat-box-footer ">
+			<input placeholder="type..." />
+			<button>ارسال</button>
+		</form>
+	</div>
+
+	<script>
+		const handelVisibility = () => {
+			let chat_box = document.getElementById('chat-box')
+			let btn = document.getElementById('btn-start')
+			let image = document.getElementById('chat-img')
+			if (chat_box.classList.contains("chat-box-active")) {
+				chat_box.classList.remove('chat-box-active')
+				image.src = './chat.svg';
+				btn.classList.remove('btn-start-active')
+			}
+			else {
+				chat_box.classList.add('chat-box-active')
+				image.src = './close.svg';
+				btn.classList.add('btn-start-active')
+			}
+		}
+
+		const submitform = () => {
+			event.preventDefault();
+			if (event.target[0].value.length > 0) {
+				let container = document.getElementById('cont')
+				var div = document.createElement('div');
+				div.classList.add('chat-box-cont-item');
+				div.innerText = event.target[0].value;
+				container.appendChild(div);
+				event.originalTarget.reset()
+			}
+		}
+	</script>
 </body>
 
 </html>

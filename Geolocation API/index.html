@@ -1,0 +1,39 @@
+<html>
+
+<head>
+	<title>Ehsan Aghahoseini - Geolocation API</title>
+	<meta charset="utf-8" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+</head>
+
+<body class="">
+
+	<button onclick="getLocation()">اگه گفتی من کجام ؟</button>
+
+	<p id="item1" ></p>
+	<p id="item2" ></p>
+	<p id="item3" ></p>
+
+	<script>
+		const item1 = document.getElementById("item1");
+		const item2 = document.getElementById("item2");
+		const item3 = document.getElementById("item3");
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "قدیمی هستی و مشتی ولی پشتیبانی نمیشی";
+			}
+		}
+
+		function showPosition(position) {
+			item2.innerHTML = "عرض: " + position.coords.latitude;
+			item3.innerHTML = "طول: " + position.coords.longitude;
+			item1.innerHTML = "بیاه کاری نداشت 👍";
+		}
+	</script>
+</body>
+
+</html>

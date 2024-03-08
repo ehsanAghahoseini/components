@@ -1,0 +1,33 @@
+<html>
+
+<head>
+	<title>Auto type </title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+	<p id="text"></p>
+	<script>
+		var i = 0;
+		var txt = 'یا منو ببر به خونتون یا بیا بریم به خونمون';
+		document.addEventListener('load', autoType())
+		function autoType() {
+			if (i < txt.length) {
+				document.getElementById("text").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(autoType, 100);
+			}
+			else {
+				setTimeout(() => {
+					i = 0;
+					document.getElementById("text").innerHTML = '';
+					autoType()
+				}, 1000);
+
+			}
+		}
+	</script>
+</body>
+
+</html>

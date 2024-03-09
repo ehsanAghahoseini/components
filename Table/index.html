@@ -1,0 +1,75 @@
+<html>
+
+<head>
+	<title>Table</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+</head>
+
+<body>
+
+	<div class="Ctable-parent">
+		<table id="Ctable" class="Ctable">
+			<tr class="Ctable-head">
+				<th>
+					<span>ردیف</span>
+				</th>
+				<th>
+					<span>نوع هزینه</span>
+				</th>
+				<th>
+					<span>مدت (ماه)</span>
+				</th>
+				<th>
+					<span> تاریخ</span>
+				</th>
+				<th>
+					<span> مبلغ تخفیف (ریال)</span>
+				</th>
+				<th>
+					<span>مالیات (عوارض)</span>
+				</th>
+				<th>
+					<span>مبلغ</span>
+				</th>
+				<th>
+					<span>عملیات</span>
+				</th>
+			</tr>
+		</table>
+	</div>
+
+	<script>
+		let table = document.getElementById('Ctable')
+		let row = ['8565742', 'هزینه خدمات ثبت نام ناوگان باری', '12', '03/12/1402', '0', '0', '5,000', 'action'];
+		let data = [];
+		for (let i of new Array(20).fill('')) {
+			data.push(row)
+		}
+		for (let i of data) {
+			const tr = document.createElement("tr");
+			tr.className = 'Ctable-row'
+			for (let j in i) {
+				const td = document.createElement("td");
+				if (i[j] == 'action') {
+					let btnDelete = document.createElement('button');
+					let imgDelete = document.createElement('img')
+					imgDelete.src = './delete.svg';
+					btnDelete.appendChild(imgDelete)
+					btnDelete.className = 'Ctable-btn';
+					td.appendChild(btnDelete);
+				}
+				else {
+					const textnode = document.createTextNode(i[j]);
+					td.appendChild(textnode);
+				}
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+		}
+	</script>
+
+</body>
+
+</html>

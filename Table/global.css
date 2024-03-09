@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "iran-sans";
+  src: url("../IRANSans.woff");
+}
+
+* {
+  box-sizing: border-box
+}
+
+
+body {
+  scroll-behavior: smooth;
+  background: #e0e0e0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+
+.Ctable-parent {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.Ctable-parent::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
+.Ctable {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  max-width: 1300px;
+  min-width: 1100px;
+  direction: rtl;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.Ctable tr {
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 76.9%, .5);
+  border-radius: 10px;
+}
+
+.Ctable-head {
+  height: 50px;
+  border-radius: 10px;
+}
+
+.Ctable-head th {
+  background-color: #524c49;
+  color: #968a84;
+  font-size: 11px;
+  font-weight: 200;
+  text-align: right;
+  padding: 13px 8px;
+  font-size: 12px;
+  position: relative;
+}
+
+.Ctable-head th::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 60%;
+  background: #a2958e;
+  left: 0;
+  top: 20%;
+}
+
+.Ctable-head th:first-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.Ctable-head th:last-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.Ctable-head th:last-child::after {
+  display: none;
+}
+
+.Ctable td {
+  text-align: right;
+  padding: 13px 8px;
+  font-size: 12px;
+  position: relative;
+  background-color: #fff;
+}
+
+.Ctable td::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 60%;
+  background: #e2e2e2;
+  left: 0;
+  top: 20%;
+}
+
+.Ctable td:first-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.Ctable td:last-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.Ctable td:last-child::after {
+  display: none;
+}
+
+.Ctable-counter {
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.Ctable-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  /* border:1px solid #e0e0e0; */
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.Ctable-btn img {
+  width: 20px;
+}
+
+@media only screen and (max-width:650px) {
+  .Ctable-head-item,
+  .Ctable-row-item {
+      justify-content: center;
+      padding-right: 0;
+  }
+  .Ctable {
+      border-spacing: 0 14px;
+  }
+}

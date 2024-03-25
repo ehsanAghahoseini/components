@@ -44,6 +44,7 @@ img {
   height: 200px;
   margin-top: 50px;
   border-radius: 15px;
+  border: 5px solid #fff;
 }
 
 input:focus  {

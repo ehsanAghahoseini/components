@@ -1,0 +1,27 @@
+<html>
+
+<head>
+	<title>Qr code generator </title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+
+	<form onsubmit="handelQrCode()">
+		<input placeholder="متن یا لینک وارد کنید" />
+		<button>ساختن Qr</button>
+	</form>
+
+	<script>
+		const handelQrCode = () => {
+			event.preventDefault();
+			let value = event.target[0].value;
+			let image = document.createElement('img')
+			image.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${value}`;
+			document.body.appendChild(image)
+		}
+	</script>
+</body>
+
+</html>

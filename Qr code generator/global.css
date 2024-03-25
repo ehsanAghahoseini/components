@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "iran-sans";
+  src: url("../IRANSans.woff");
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #e0e0e0;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+  direction: rtl;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+input:focus  {
+  outline: none;
+}
+
+
+ input {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  border:1px solid #afafaf;
+  padding: 0 5px;
+}
+
+button {
+  height: 40px;
+  background:rgb(32, 184, 255);
+  color: white;
+  border-radius: 5px;
+  border:none;
+  cursor: pointer;
+}

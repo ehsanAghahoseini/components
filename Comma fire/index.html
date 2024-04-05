@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title>Comma fire </title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+	<span class="price">800000</span>
+	<span class="price">5000000</span>
+	<span class="price">12000000</span>
+	<span class="price">123456789</span>
+
+	<script>
+		let price = document.getElementsByClassName('price')
+		for(let i of price){
+			i.innerHTML =
+			 parseInt(i.innerHTML
+			  .replace(/[^\d]+/gi, ''))
+		       .toLocaleString('en-US')
+		}
+	</script>
+</body>
+
+</html>

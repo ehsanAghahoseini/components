@@ -19,6 +19,32 @@
     </section>
   </div>
 
+
+  <model-viewer
+    ar
+    modes="scene-viewer quick-look webxr"
+    src='model.glb' 
+    ios-src=''
+    touch-action="pan-y"
+    reveal="manual"
+    auto-rotate
+    shadow-intensity="1"
+    camera-controls
+    style='width: 100% ; height: 100%;'
+    camera-orbit= {orbit[+params.slug]}
+  >
+  <button slot="ar-button" id="ar-button">
+      View in your space
+  </button>
+</model-viewer>
+
+
+  <main>
+    <section ></section>
+    <section ></section>
+    <section ></section>
+  </main>
+
 </body>
 
 </html>

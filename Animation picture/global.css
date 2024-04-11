@@ -1,0 +1,55 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif !important;
+  background: #252525;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+  direction: rtl;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  animation: morph 2s linear  infinite;
+}
+
+@keyframes morph {
+  0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}

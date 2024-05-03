@@ -88,14 +88,3 @@ body {
   background: #ffffff24;
   backdrop-filter: blur(8px);
 }
-
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-section {
-  width: 100%;
-  scroll-snap-align:center ;
-}

@@ -1,0 +1,59 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #7073f0;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont {
+  width: 98%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.thumbnail img , .hero {
+  width: 100%;
+  aspect-ratio: 3/2.5;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
+

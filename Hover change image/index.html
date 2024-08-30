@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>Hover CHange Image</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+	<div class="cont">
+		<img id="hero" class="hero" src="./1.jpeg" />
+		<div class="thumbnail">
+			<img onmouseover="handel(this.src)" src="./2.jpeg" />
+			<img onmouseover="handel(this.src)" src="./3.jpg" />
+			<img onmouseover="handel(this.src)" src="./4.jpg" />
+			<img onmouseover="handel(this.src)" src="./5.jpg" />
+		</div>
+	</div>
+
+	<script>
+		const handel =(newSrc)=>{
+			let hero =
+			  document.getElementById('hero')
+			hero.src = newSrc;
+		}
+	</script>
+
+</body>
+
+
+</html>

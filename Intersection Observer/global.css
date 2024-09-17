@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #f9f9f9;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.container {
+  padding:20px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.card {
+  width: 200px;
+  height: 80px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border: 2px solid #000;
+  transform: translate(150px, 0);
+  transition: all .8s;
+}
+
+.show {
+  transform: translate(0, 0);
+}

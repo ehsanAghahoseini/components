@@ -1,0 +1,74 @@
+<html>
+
+<head>
+	<title>Intersection Observer </title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./global.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<div class="card">کارت جدید</div>
+		<!-- هر تعداد کارت دلخواه -->
+	</div>
+
+
+	<script>
+		let cards = document.querySelectorAll('.card')
+		const observer =
+			new IntersectionObserver(entrise => {
+				entrise.forEach(e => {
+					e.target.classList.toggle("show", e.isIntersecting)
+				})
+			})
+		cards.forEach(card => {
+			observer.observe(card)
+		});
+	</script>
+
+</body>
+
+</html>

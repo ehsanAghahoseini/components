@@ -1,0 +1,77 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background: #1b1b1b;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+
+
+body {
+  font-family: "iran-sans", sans-serif !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 100vh;
+  background: #252525;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  align-items: center;
+  justify-content: center;
+  color: #252525;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #484646;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(#b778f0 ,
+   transparent, transparent);
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transition: opacity 0.8s;
+  border-radius: 50%;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+

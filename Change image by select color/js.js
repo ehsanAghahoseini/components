@@ -1,6 +1,4 @@
-const handelImage = (color) => {
-    console.log(color);
-    
+const handelImage = (color) => {    
     let data = {
         'tomato': './1.png',
         'gray': './2.png',
@@ -8,6 +6,5 @@ const handelImage = (color) => {
     }
     const img = document.getElementById('image')
     img.src = data[color]
- 
 }
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+    <link href="./global.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <p id="paragraph">موس یا انگشت دکمه را فشار نمیده</p>
+    <button
+      onmousedown="start()"
+      onmouseup="stop()"
+      ontouchstart="start()"
+      ontouchend="stop()"
+      class="btn"
+    >
+      <img src="./1.png" />
+      <div id="wave-cont">
+        <span class="btn-wave"></span>
+        <span class="btn-wave"></span>
+        <span class="btn-wave"></span>
+      </div>
+    </button>
+  </body>
+  <script src="./js.js"></script>
+</html>

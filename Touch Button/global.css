@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "iran-sans";
+  src: url("../IRANSans.woff");
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #000;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  all: unset;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: linear-gradient(175.53deg, #BA56F0 42.14%, #E1463A 101.71%);
+  & img {
+    width: 50px;
+  }
+}
+
+#wave-cont {
+  display: none;
+}
+
+.btn-wave {
+  content:"";
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+  border: 1px solid #BA56F0;
+  border-radius:50px;
+  animation:ripple-wave 2s linear infinite;
+  transform:scale(1);
+  transition:all .5s ease-in-out
+}
+@keyframes ripple-wave {
+  0% {
+    opacity:.8;
+    transform:scale(.9)
+  }
+  to {
+    opacity:0;
+    transform:scale(2)
+  }
+}
+
+.btn-wave:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.btn-wave:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.btn-wave:nth-child(4) {
+  animation-delay: 1.2s;
+}

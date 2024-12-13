@@ -54,6 +54,7 @@ p {
   position: relative;
   border: 1px solid #fff;
   cursor: pointer;
+  user-select: none;
   background: linear-gradient(175.53deg, #BA56F0 42.14%, #E1463A 101.71%);
   & img {
     width: 50px;

@@ -1,0 +1,43 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #111022;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.glow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid tomato;
+  transition: all 0.1s;
+  display: grid ;
+  place-items: center;
+}
+.glow::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: tomato;
+  border-radius: 50%;
+}

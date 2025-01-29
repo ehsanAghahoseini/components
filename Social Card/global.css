@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "iran-sans";
+  src: url("../IRANSans.woff");
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "iran-sans", sans-serif;
+}
+
+body {
+  font-family: "iran-sans", sans-serif;
+  background: #fff;
+  margin: 0 !important;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  direction: rtl;
+}
+
+/* From Uiverse.io by ElsayedShamsEldeen */ 
+.main_card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background: #075891;
+}
+
+.cool_card_logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  font-weight: bold;
+}
+
+.box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.box:hover .svg {
+  fill: white;
+}
+
+.box1 {
+  width: 85%;
+  height: 85%;
+  bottom: -85%;
+  left: -85%;
+}
+
+.box2 {
+  width: 65%;
+  height: 65%;
+  bottom: -65%;
+  left: -65%;
+  transition-delay: 0.2s;
+}
+
+.box3 {
+  width: 45%;
+  height: 45%;
+  bottom: -45%;
+  left: -45%;
+  transition-delay: 0.4s;
+}
+
+.box4 {
+  width: 25%;
+  height: 25%;
+  bottom: -25%;
+  left: -25%;
+  transition-delay: 0.6s;
+}
+
+.main_card:hover {
+  transform: scale(1.1);
+}
+
+.main_card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.main_card:hover .cool_card_logo {
+  transform: translate(0, 0);
+  bottom: 20px;
+  right: 20px;
+}

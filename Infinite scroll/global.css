@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background: #1b1b1b;
+}
+
+span,
+div,
+input,
+textarea,
+button,
+select,
+a,
+pre {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: 'iran-sans', sans-serif;
+}
+
+body {
+  font-family: 'iran-sans', sans-serif !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 100vh;
+  background: #252525;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  align-items: center;
+  justify-content: center;
+  color: #252525;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  overflow-x: hidden;
+  max-width: 1536px;
+  margin: 2rem auto;
+  height: 100px;
+  overflow-x: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.itemLeft,
+.itemRight {
+  width: 200px;
+  height: 100px;
+  background: #e11d48;
+  border-radius: 6px;
+  position: absolute;
+  animation: 30s linear infinite;
+}
+
+
+
+.itemLeft {
+  left: 1600px;
+  animation-name: sLeft;
+}
+.itemRight {
+  right: 1600px;
+  animation-name: sRight;
+}
+
+@keyframes sLeft {
+  to {left: -200px;}}
+
+@keyframes sRight {
+  to {right: -200px;}}
+
+.item1 {animation-delay: -26.25s;}
+.item2 {animation-delay: -22.5s;}
+.item3 {animation-delay: -18.75s;}
+.item4 {animation-delay: -15s;}
+.item5 {animation-delay: -11.25s;}
+.item6 {animation-delay: -7.5s;}
+.item7 {animation-delay: -3.75s;}
+.item8 {animation-delay: 0s;}

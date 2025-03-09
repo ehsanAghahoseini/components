@@ -5,7 +5,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  background: #1b1b1b;
+  /* background: #1b1b1b; */
 }
 
 span,
@@ -25,7 +25,7 @@ body {
   margin: 0 !important;
   width: 100%;
   height: 100vh;
-  background: #252525;
+  background: #fffcf2;
   display: flex;
   flex-direction: column;
   direction: rtl;
@@ -42,7 +42,7 @@ body {
   width: 90%;
   overflow-x: hidden;
   max-width: 1536px;
-  margin: 2rem auto;
+  margin: 0.5rem auto;
   height: 100px;
   overflow-x: hidden;
   mask-image: linear-gradient(
@@ -58,8 +58,8 @@ body {
 .itemRight {
   width: 200px;
   height: 100px;
-  background: #e11d48;
-  border-radius: 6px;
+  border:10px solid #252525;
+  border-radius: 15px;
   position: absolute;
   animation: 30s linear infinite;
 }

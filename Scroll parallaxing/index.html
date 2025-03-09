@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Ehsan - Scroll Parallax </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 300vh; /* ارتفاع برای اسکرول */
+        overflow-x: hidden;
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .row {
+        width: 100%;
+        height: 80px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .item {
+        width: 100%;
+        background: #e0e0e0;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <section>
+      <div class="row">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="row">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="row" >
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="row" >
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <div class="row">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+
+    <script>
+      const rows = document.querySelectorAll(".row");
+
+      function updateRows() {
+        rows.forEach((item, index) => {
+          let rect = item.getBoundingClientRect();
+          let visibility = Math.max(0, 1 - rect.top / window.innerHeight);
+          visibility = Math.min(visibility, 1);
+
+          let direction = index % 2 === 0 ? 1 : -1;
+          let translateX = (visibility * 300 - 200) * direction;
+
+          item.style.transform = `translateX(${translateX}px)`;
+        });
+      }
+
+      window.addEventListener("scroll", updateRows);
+      window.addEventListener("load", updateRows);
+    </script>
+  </body>
+</html>

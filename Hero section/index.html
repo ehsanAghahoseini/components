@@ -1,76 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Ehsan - Hero Section</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #252525;
+      }
 
-<head>
-	<title>Table</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="./global.css">
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-</head>
+	body {
+	overflow: hidden;
+	}
+	section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: flex-end;
+	}
+	.container {
+	margin-right: -30%;
+	margin-top: -80%;
+	width: 75%;
+	height: 2300px;
+	perspective: 200px;
+	perspective-origin: 59% 85%;
+	}
+	.slider {
+	background-size: 100%;
+	transform: scaleX(0.85) scaleY(1)
+		scaleZ(1) rotateX(3.5deg)
+		rotateY(354deg) rotate(10deg)
+		translateX(0) translateY(0)
+		translateZ(0) skewX(0deg) skewY(0deg);
+	animation: moveBackground 35s linear infinite;
+	width: 90%;
+	height: 100%;
+	background-image: url("./preview.png");
+	}
 
-<body>
+	@keyframes moveBackground {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 0 -1000px; 
+	}
+	}
 
-	<div class="Ctable-parent">
-		<table id="Ctable" class="Ctable">
-			<tr class="Ctable-head">
-				
-				<th>
-					<span>ردیف</span>
-				</th>
-				<th>
-					<span>نوع هزینه</span>
-				</th>
-				<th>
-					<span>مدت (ماه)</span>
-				</th>
-				<th>
-					<span> تاریخ</span>
-				</th>
-				<th>
-					<span> مبلغ تخفیف (ریال)</span>
-				</th>
-				<th>
-					<span>مالیات (عوارض)</span>
-				</th>
-				<th>
-					<span>مبلغ</span>
-				</th>
-				<th>
-					<span>عملیات</span>
-				</th>
-			</tr>
-		</table>
-	</div>
 
-	<script>
-		let table = document.getElementById('Ctable')
-		let row = ['8565742', 'هزینه خدمات ثبت نام ناوگان باری', '12', '03/12/1402', '0', '0', '5,000', 'action'];
-		let data = [];
-		for (let i of new Array(20).fill('')) {
-			data.push(row)
-		}
-		for (let i of data) {
-			const tr = document.createElement("tr");
-			tr.className = 'Ctable-row'
-			for (let j in i) {
-				const td = document.createElement("td");
-				if (i[j] == 'action') {
-					let btnDelete = document.createElement('button');
-					let imgDelete = document.createElement('img')
-					imgDelete.src = './delete.svg';
-					btnDelete.appendChild(imgDelete)
-					btnDelete.className = 'Ctable-btn';
-					td.appendChild(btnDelete);
-				}
-				else {
-					const textnode = document.createTextNode(i[j]);
-					td.appendChild(textnode);
-				}
-				tr.appendChild(td);
-			}
-			table.appendChild(tr);
-		}
-	</script>
-
-</body>
-
+</style>
+  </head>
+  <body>
+    <section>
+		<div class="container">
+			<div class="slider"></div>
+		</div>
+    </script>
+  </body>
 </html>

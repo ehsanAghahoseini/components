@@ -21,15 +21,15 @@
 	display: flex;
 	justify-content: flex-end;
 	}
-	.container {
+.container {
 	margin-right: -30%;
 	margin-top: -80%;
 	width: 75%;
 	height: 2300px;
 	perspective: 200px;
 	perspective-origin: 59% 85%;
-	}
-	.slider {
+}
+.slider {
 	background-size: 100%;
 	transform: scaleX(0.85) scaleY(1)
 		scaleZ(1) rotateX(3.5deg)
@@ -40,25 +40,25 @@
 	width: 90%;
 	height: 100%;
 	background-image: url("./preview.png");
-	}
+}
 
-	@keyframes moveBackground {
+@keyframes moveBackground {
 	from {
 		background-position: 0 0;
 	}
 	to {
 		background-position: 0 -1000px; 
 	}
-	}
+}
 
 
 </style>
   </head>
   <body>
     <section>
-		<div class="container">
-			<div class="slider"></div>
-		</div>
+<div class="container">
+	<div class="slider"></div>
+</div>
     </script>
   </body>
 </html>

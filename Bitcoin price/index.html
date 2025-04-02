@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>WebEhsan - Bitcoin price</title>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <script>
+      async function getBitcoinPrice() {
+        try {
+          const bitcoinApiUrl =
+            "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
+          const response = await fetch(bitcoinApiUrl);
+          const data = await response.json();
+          console.log(`قیمت لحظه‌ای بیت‌کوین: ${data.bitcoin.usd} دلار`);
+        } catch (error) {
+          console.error("خطا در دریافت قیمت بیت‌کوین:", error);
+        }
+      }
+
+      async function getGoldPrice() {
+        try {
+          const goldApiUrl =
+            "https://api.coingecko.com/api/v3/simple/price?ids=gold&vs_currencies=usd";
+          const response = await fetch(goldApiUrl);
+          const data = await response.json();
+          console.log(
+            `قیمت لحظه‌ای طلا: ${data.gold.usd} دلار به ازای هر اونس`
+          );
+        } catch (error) {
+          console.error("خطا در دریافت قیمت طلا:", error);
+        }
+      }
+
+      async function getSilverPrice() {
+        try {
+          const silverApiUrl =
+            "https://api.coingecko.com/api/v3/simple/price?ids=silver&vs_currencies=usd";
+          const response = await fetch(silverApiUrl);
+          const data = await response.json();
+          console.log(
+            `قیمت لحظه‌ای نقره: ${data.silver.usd} دلار به ازای هر اونس`
+          );
+        } catch (error) {
+          console.error("خطا در دریافت قیمت نقره:", error);
+        }
+      }
+
+      // اجرای توابع برای دریافت قیمت‌ها
+      getBitcoinPrice();
+      getGoldPrice();
+      getSilverPrice();
+    </script>
+  </body>
+</html>

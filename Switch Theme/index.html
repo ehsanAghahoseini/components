@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebEhsan - Switch Theme </title>
+    <style>
+      :root {
+        --bg: #fff;
+        --color: #000;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--color);
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        transition: 0.3s;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> سایت من خوش آمدید</h1>
+    <button onclick="toggleTheme()">تغییر تم</button>
+
+    <script>
+      const root = document.documentElement;
+      let dark = localStorage.getItem("dark") === "true";
+
+      function setColors() {
+        if (dark) {
+          root.style.setProperty("--bg", "#111");
+          root.style.setProperty("--color", "#fff");
+        } else {
+          root.style.setProperty("--bg", "#fff");
+          root.style.setProperty("--color", "#000");
+        }
+      }
+
+      function toggleTheme() {
+        dark = !dark;
+        localStorage.setItem("dark", dark);
+        setColors();
+      }
+
+      setColors(); 
+    </script>
+  </body>
+</html>

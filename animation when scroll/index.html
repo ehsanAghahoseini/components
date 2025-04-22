@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Ehsan - Animation when scroll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background: #000;
+            color: #444; 
+            height: 300vh; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 90%; 
+            font-size: clamp(30px, 10vw, 80px);
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .word {
+            color: #444; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="textContainer">
+        این یک متن تستی است که هنگام اسکرول فقط رنگ آن تغییر می‌کند و متن در جای خود ثابت می‌ماند.
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const textContainer = document.getElementById("textContainer");
+            const words = textContainer.innerText.split(" ");
+            textContainer.innerHTML = words.map(word => `<span class="word">${word} </span>`).join(" ");
+
+            const wordElements = document.querySelectorAll(".word");
+
+            gsap.to(wordElements, {
+                scrollTrigger: {
+                    trigger: document.body,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 2
+                },
+                color: "#fff", 
+                stagger: 0.1
+            });
+        });
+    </script>
+
+</body>
+</html>

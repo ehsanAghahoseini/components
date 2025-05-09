@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>محصول با رنگ و ارسال</title>
+  </head>
+  <body style="text-align: center; direction: rtl; font-family: tahoma">
+    <h3>انتخاب رنگ:</h3>
+    <select id="colorSelect">
+      <option value="white" selected>سفید</option>
+      <option value="black">سیاه</option>
+      <option value="red">قرمز</option>
+    </select>
+
+    <div style="margin-top: 20px">
+      <img
+        id="productImage"
+        src="./1.png"
+        width="200"
+      />
+    </div>
+
+    <h3>روش ارسال:</h3>
+    <select id="shippingSelect">
+      <option value="ground" selected>زمینی</option>
+      <option value="air">هوایی</option>
+    </select>
+
+    <h3 style="margin-top: 55px">قیمت: <span id="priceText" >5,000,000</span> تومان</h3>
+
+    <script>
+      const imageLinks = {
+        white: "./1.png",
+        black: "./2.png",
+        red: "./3.png",
+      };
+
+      const shippingPrices = { ground: 100000, air: 200000 };
+      const basePrice = 5000000;
+
+      colorSelect.onchange = function () {
+        productImage.src = imageLinks[this.value];
+      };
+
+      shippingSelect.onchange = function () {
+        const finalPrice = basePrice + shippingPrices[this.value];
+        priceText.textContent = finalPrice.toLocaleString();
+      };
+    </script>
+  </body>
+</html>

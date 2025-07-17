@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <link rel="stylesheet" href="/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="">@Webehsan</a>
+    <p>Dedicated with gratitude to our dear teacher, Ehsan, in appreciation of his efforts!</p>
+
+    <footer class="webehsan__menu">
+        <button class="webehsan__menu__item" title="delete" style="background-image: url(/svg/delete.svg);"></button>
+        <button class="webehsan__menu__item" title="home" style="background-image: url(/svg/home.svg);"></button>
+        <button class="webehsan__menu__item" title="logout" style="background-image: url(/svg/logout.svg);"></button>
+        <button class="webehsan__menu__item" title="menu" style="background-image: url(/svg/menu.svg);"></button>
+        <button class="webehsan__menu__item" title="settings"
+            style="background-image: url(/svg/settings.svg);"></button>
+        <button class="webehsan__menu__item" title="shoping" style="background-image: url(/svg/shoping.svg);"></button>
+        <button class="webehsan__menu__item" title="stack" style="background-image: url(/svg/stack.svg);"></button>
+    </footer>
+    <script>
+        const menu = document.querySelector(".webehsan__menu");
+        menu.querySelectorAll(".webehsan__menu__item").forEach((item, index) => {
+            item.addEventListener("mouseenter", function () {
+                !index == 0 ? menu.children[index - 1].classList.add("element__before__hover") : null;
+            });
+            item.addEventListener("mouseleave", function () {
+                !index == 0 ? menu.children[index - 1].classList.remove("element__before__hover") : null;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

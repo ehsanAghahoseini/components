@@ -1,0 +1,116 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    transition: all .3s linear;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --one-color: #184e77;
+    --two-color: #1e6091;
+    --three-color: #001d3d;
+    --white-color: #FFFFFF;
+}
+
+html,
+body {
+    width: clamp(100vw, 100vw, 100vw);
+    height: clamp(100vh, 100vh, 100vh);
+    background: var(--two-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    font-size: 500%;
+    color: var(--white-color);
+}
+
+p {
+    color: var(--white-color);
+    font-size: 125%;
+    letter-spacing: .1ch;
+}
+
+.webehsan__menu {
+    padding: 1.5ch;
+    margin: auto auto 5% auto;
+    background: var(--three-color);
+    box-shadow: 0 1ch 1ch rgb(0, 0, 0, .25);
+    border-radius: 2ch;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2ch;
+}
+
+.webehsan__menu__item {
+    width: 7.5ch;
+    aspect-ratio: 1/1;
+    border-radius: 1ch;
+    background-color: var(--white-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+    cursor: pointer;
+    margin: auto 0;
+    z-index: 1;
+}
+
+.webehsan__menu__item:hover {
+    scale: 1.1;
+    transform: translateY(-30%);
+}
+
+.webehsan__menu__item:hover::before {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    scale: 1.5;
+    background: rgb(255, 255, 255, .25);
+    border-radius: 1ch;
+    content: "";
+    z-index: -1;
+    animation: webehsan__menu__item__hover__before .25s linear;
+}
+
+@keyframes webehsan__menu__item__hover__before {
+    from {
+        opacity: 0;
+    }
+}
+
+.webehsan__menu__item:hover+.webehsan__menu__item,
+.element__before__hover {
+    transform: translateY(-15%);
+}
+
+.webehsan__menu__item:hover::after {
+    width: fit-content;
+    height: fit-content;
+    padding: 1ch;
+    border-radius: 1ch;
+    display: flex;
+    background: var(--three-color);
+    color: var(--white-color);
+    position: absolute;
+    inset: 0;
+    margin-top: -100%;
+    transition: all .3s linear;
+    animation: footer__button__after .3s linear;
+    content: attr(title);
+}
+
+@keyframes footer__button__after {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+}

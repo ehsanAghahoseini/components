@@ -18,11 +18,15 @@
     </style>
   </head>
   <body>
-    <button onclick="showAlert()">پیام ساده</button>
+    <button onclick="showAlert()">نمایش پیغام</button>
 
     <script type="text/javascript">
       const showAlert = () => {
-        Swal.fire("سلام!", "این یک پیام ساده است.", "success");
+        Swal.fire({
+          title: "سلام",
+          text: "متن پیام",
+          icon: "success",
+        });
       };
     </script>
   </body>

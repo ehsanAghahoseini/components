@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebEhsan - Alert</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      body {
+        overflow: hidden;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        width: 200px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showAlert()">پیام ساده</button>
+
+    <script type="text/javascript">
+      const showAlert = () => {
+        Swal.fire("سلام!", "این یک پیام ساده است.", "success");
+      };
+    </script>
+  </body>
+</html>

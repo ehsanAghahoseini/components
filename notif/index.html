@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebEhsan - Notyf Toast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #252525;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showNotif()">نمایش اعلان</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script>
+      const showNotif = () => {
+        const notyf = new Notyf();
+
+        notyf.open({
+          type: "warning",
+          message: "هشدار! توجه کنید ⚠️",
+          background: "orange",
+        });
+      };
+    </script>
+  </body>
+</html>

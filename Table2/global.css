@@ -1,0 +1,313 @@
+
+
+
+:root {
+    --text-gray: #e7e7e7;
+    --bg: #fff;
+    --table-bg: #131418;
+    --primary: #cefe00;
+    --primary-dark: #b9e300;
+    --text: #ffffff;
+    --text-dark: #1a1a1a;
+    --white: #ffffff;
+    --gray-light: #7d7d7d;
+    --inactive: #ffd071;
+    --offline: #bbbbbb;
+    --table-head-bg: #1d212a;
+    --status--paid-bg: #18d767;
+    --status--paid-border: #18d767;
+    --status--cancelled: #ff8585;
+    --status--pending: #d99f00;
+    --border-color: #f5f6f8;
+    --font: 'Poppins', sans-serif;
+    --font-size-base: 0.95rem;
+    --font-size-large: 1.2rem;
+    --font-size-small: 0.85rem;
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background: var(--primary);
+    color: var(--text-dark);
+}
+
+body {
+    font-family: var(--font);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.table-widget {
+    border-radius: 1rem;
+    background: var(--table-bg);
+    padding: var(--spacing-xl);
+    text-align: left;
+    overflow-x: auto;
+    color: var(--text);
+    border: 1px solid var(
+        --border-color);
+    min-width: 600px;
+    max-width: 100%;
+    box-shadow: 
+        rgba(0, 0, 0, 0.02) 
+            0px 1px 3px 0px, 
+        rgba(27, 31, 35, 0.15) 
+        0px 0px 0px 1px;
+}
+
+.table-widget h2 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.table-widget h2 svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 
+        var(--spacing-sm);
+}
+
+.table-widget table {
+    margin-top: 0.5rem;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    border-left: 1px solid var(--gray-light);
+    border-right: 1px solid var(--gray-light);
+}
+
+.table-widget .caption {
+    display: flex;
+    justify-content: 
+        space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.table-widget footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: right;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.table-widget thead {
+    background: 
+        var(--table-head-bg);
+}
+
+/* expand button */
+.table-widget .export-btn {
+    background: transparent;
+    color: var(--text);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    font-size: 
+        var(--font-size-large);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all 0.3s ease;
+}
+
+.table-widget 
+.export-btn:hover {
+    color: var(--primary);
+}
+
+
+.table-widget 
+.export-btn svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.table-widget th {
+    padding: 
+        var(--spacing-md);
+    font-size: 
+        var(--font-size-base);
+    font-weight: 700;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid 
+        var(--gray-light);
+    text-align: left;
+    white-space: nowrap;
+    transition: background-color 
+        0.2s ease, color 0.2s ease;
+}
+
+.table-widget th:hover {
+    color: var(--primary);
+}
+
+.table-widget th.resizable::after {
+    content: '⇅';
+    font-size: 1rem;
+    margin-left: 8px;
+    color: var(--text);
+}
+
+.table-widget th:hover::after,
+.table-widget th:hover::before {
+    color: var(--primary);
+}
+
+.table-widget 
+th.sortable.sorted-asc::after {
+    content: '▲';
+}
+
+.table-widget 
+th.sortable.sorted-desc::after {
+    content: '▼';
+}
+
+.table-widget td {
+    padding: var(--spacing-md);
+    background: transparent;
+    color: var(--text);
+    vertical-align: middle;
+    border-bottom: 1px solid 
+    var(--gray-light);
+    white-space: nowrap;
+}
+
+.table-widget tbody tr:hover img,
+.table-widget tbody tr:hover .tag {
+    transition: all 0.2s ease;
+    border-color: var(--primary);
+}
+
+.table-widget tbody tr:hover td {
+    cursor: pointer;
+    color: var(--primary);
+
+}
+
+.table-widget .rowCheckbox {
+    inline-size: 1.15rem;
+    block-size: 1.15rem;
+    accent-color: var(--primary);
+    vertical-align: -2px;
+}
+
+.table-widget .rowCheckbox:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(var(--primary) / .35);
+    border-radius: 4px; 
+}
+
+/* Company Profile */
+.company-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.company-profile img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid 
+        var(--text);
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.profile-info__name {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* status */
+.status {
+    border-radius: 0.45rem;
+    width: fit-content;
+    display: flex;
+    font-weight: 700;
+    gap: var(--spacing-sm);
+    align-items: center;
+    padding: 
+        var(--spacing-sm) 
+        var(--spacing-md);
+    font-weight: 600;
+    color: var(--white);
+    font-size: 
+        var(--font-size-small);
+    transition: 
+        border-color 0.2s ease;
+    text-transform: capitalize;
+}
+
+.status--filled {
+    color: 
+        var(--status--paid-border);
+    border: 
+        1.5px solid 
+        var(--status--paid-border);
+}
+
+.avatar__wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* more status */
+.status--cancelled {
+    color: 
+        var(--status--cancelled);
+    border: 
+        1.5px solid 
+        var(--status--cancelled);
+}
+
+.status--pending {
+    color: 
+        var(--status--pending);
+    border: 
+        1.5px solid 
+        var(--status--pending);
+}
+
+.download-link {
+    display: none;
+}

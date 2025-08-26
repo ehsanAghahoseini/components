@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>WebEhsan - Table</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" type='text/css'>
+	<link rel="stylesheet" href="./global.css">
+</head>
+
+<body>
+	<article class="table-widget">
+		<div class="caption">
+			<h2>
+				<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+				Product Purchases
+			</h2>
+			<button class="export-btn" type="button">
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-export" width="24"
+					height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+					stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					<path d="M14 3v4a1 1 0 0 0 1 1h4" />
+					<path d="M11.5 21h-4.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v5m-5 6h7m-3 -3l3 3l-3 3" />
+				</svg>
+				Export
+			</button>
+		</div>
+		<table id="team-table">
+			<thead>
+				<tr>
+					<th>
+						<input type="checkbox" class="resizable rowCheckbox" id="selectAllCheckbox">
+					</th>
+					<th class="resizable sortable" data-column="0">ID</th>
+					<th class="resizable sortable" data-column="1">Purchase Date</th>
+					<th class="resizable sortable" data-column="2">Status</th>
+					<th class="resizable sortable" data-column="3">User</th>
+					<th class="resizable sortable" data-column="4">Order Type</th>
+					<th class="resizable sortable" data-column="5">Status</th>
+				</tr>
+			</thead>
+			<tbody id="team-member-rows">
+				<tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1011</td>
+					<td>15 Aug, 10:01</td>
+					<td><span class="status status--filled">Paid</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/alex.jpg" alt="Avatar" class="avatar">
+						Avery Klein
+					  </div>
+					</td>
+					<td>
+					  Modern Frontend Developer
+					</td>
+					<td>$79.00</td>
+				  </tr>
+				  <tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1012</td>
+					<td>15 Aug, 10:07</td>
+					<td><span class="status status--filled">Paid</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/jordan.jpg" alt="Jordan Price" class="avatar">
+						Jordan Price
+					  </div>
+					</td>
+					<td>
+					  Atheros Pass Subscription
+					</td>
+					<td>$121.44</td>
+				  </tr>
+				  <tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1013</td>
+					<td>15 Aug, 10:12</td>
+					<td><span class="status status--pending">Pending</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/melissa.jpg" alt="Melissa Nash" class="avatar">
+						Melissa Nash
+					  </div>
+					</td>
+					<td>
+					  Modern Frontend Developer
+					</td>
+					<td>$79.00</td>
+				  </tr>
+				  <tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1014</td>
+					<td>15 Aug, 10:19</td>
+					<td><span class="status status--filled">Paid</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/taylor.jpg" alt="Taylor Sims" class="avatar">
+						Taylor Sims
+					  </div>
+					</td>
+					<td>
+					  Atheros Pass Subscription
+					</td>
+					<td>$121.44</td>
+				  </tr>
+				  <tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1015</td>
+					<td>15 Aug, 10:24</td>
+					<td><span class="status status--cancelled">Canceled</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/casey.jpg" alt="Casey Blake" class="avatar">
+						Casey Blake
+					  </div>
+					</td>
+					<td>
+					  Modern Frontend Developer
+					</td>
+					<td>$79.00</td>
+				  </tr>
+				  <tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1016</td>
+					<td>15 Aug, 10:31</td>
+					<td><span class="status status--pending">Pending</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/skyler.jpg" alt="Skyler Hart" class="avatar">
+						Skyler Hart
+					  </div>
+					</td>
+					<td>
+					  UX UI Design Process
+					</td>
+					<td>$98.00</td>
+				  </tr>
+				  <tr>
+					<td><input type="checkbox" class="rowCheckbox"></td>
+					<td>#1017</td>
+					<td>15 Aug, 10:38</td>
+					<td><span class="status status--filled">Paid</span></td>
+					<td>
+					  <div class="avatar__wrapper">
+						<img src="assets/jamie.jpg" alt="Jamie Cross" class="avatar">
+						Jamie Cross
+					  </div>
+					</td>
+					<td>
+					  Modern Frontend Developer
+					</td>
+					<td>$79.00</td>
+				  </tr>
+			</tbody>
+		</table>
+		<footer>
+			7 Row Results
+		</footer>
+	</article>
+	<script src="./script.js"></script>
+</body>
+
+</html>

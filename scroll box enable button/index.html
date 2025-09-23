@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebEhsan - Scroll Box Example</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+      }
+
+      .scroll-box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #888;
+        padding: 10px;
+        overflow-y: auto;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background: #888;
+        color: #fff;
+        cursor: not-allowed;
+        transition: background 0.3s, cursor 0.3s;
+      }
+
+      button.enabled {
+        background: #28a745;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-box" id="scrollBox">
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این یک متن تستی است .</p>
+      <p>این آخر متن است ✅</p>
+    </div>
+
+    <button id="myButton" disabled>ادامه</button>
+
+    <script>
+      const scrollBox = document.getElementById("scrollBox");
+      const myButton = document.getElementById("myButton");
+
+      scrollBox.addEventListener("scroll", function () {
+        // بررسی اینکه کاربر به انتهای باکس رسیده
+        if (scrollBox.scrollTop + scrollBox.clientHeight >= scrollBox.scrollHeight) {
+          myButton.disabled = false;
+          myButton.classList.add("enabled");
+        }
+      });
+    </script>
+  </body>
+</html>

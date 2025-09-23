@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../IRANSans.woff');
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* From Uiverse.io by GreyD097 */ 
+.button-box {
+  position: relative;
+  width: 12rem;
+  height: 5rem;
+  display: flex;
+}
+.button-box .button {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  cursor: pointer;
+  border: 3px solid #311703;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0.85;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.button-box .button .icon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+  transition: 0.25s;
+}
+.button-box .button:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: 30;
+  background: #ff7f50;
+}
+.button-box .button:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(-115deg);
+  z-index: 40;
+  background: #ffd700;
+}
+.button-box .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 50;
+  background: #019b98;
+}
+.button-box .button:nth-child(6) .icon {
+  animation: active 2.2s linear infinite;
+}
+.button-box .touch {
+  position: relative;
+  z-index: 60;
+  height: 100%;
+  flex: 1;
+  cursor: pointer;
+}
+.button-box .touch.left:hover ~ .button:nth-child(4) {
+  opacity: 1;
+  transform: translate(-170%, -50%) rotate(-90deg) scale(1.05);
+}
+.button-box .touch.left:hover ~ .button:nth-child(4) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+.button-box .touch.left:active ~ .button:nth-child(4) {
+  transform: translate(-170%, -50%) rotate(-90deg) scale(0.9);
+}
+.button-box .touch.right:hover ~ .button:nth-child(5) {
+  opacity: 1;
+  transform: translate(70%, -50%) rotate(90deg) scale(1.05);
+}
+.button-box .touch.right:hover ~ .button:nth-child(5) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+.button-box .touch.right:active ~ .button:nth-child(5) {
+  transform: translate(70%, -50%) rotate(90deg) scale(0.9);
+}
+.button-box .touch.middle:hover ~ .button:nth-child(6) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+}
+.button-box .touch.middle:hover ~ .button:nth-child(6) .icon {
+  width: 25px;
+  opacity: 0.9;
+}
+.button-box .touch.middle:active ~ .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(0deg) scale(0.9);
+}
+.button-box:hover .button:nth-child(4) {
+  transform: translate(-170%, -50%) rotate(-90deg);
+}
+.button-box:hover .button:nth-child(5) {
+  transform: translate(70%, -50%) rotate(90deg);
+}
+.button-box:hover .button:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.button-box:hover .button:nth-child(6) .icon {
+  animation: active 4s linear infinite;
+}
+@keyframes active {
+  to {
+    transform: rotate(360deg);
+  }
+}

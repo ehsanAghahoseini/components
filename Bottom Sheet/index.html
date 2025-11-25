@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="styleSheet" href="./global.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@solb/bottom-sheet/dist/index.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@solb/bottom-sheet/style/style.css" />
+    <title>Bottom Sheet - WebEhsan</title>
+    <style>
+      body {
+        direction: rtl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #252525;
+        font-size: 3rem;
+      }
+      .btn1 {
+        width: 200px;
+        height: 40px;
+        background: #fff;
+        border: none;
+      }
+
+      .btn-cont {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 20px;
+        & button {
+          flex: 1;
+          height: 40px;
+          background-color: transparent;
+          color: blue;
+          border-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn1" onclick="document.getElementById('test').openSheet()">باز کردن</button>
+    <bottom-sheet id="test" title="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ">
+      <main>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+        <div class="btn-cont">
+          <button type="button" onclick="document.getElementById('test').closeSheet()">بستن</button>
+          <button type="button" onclick="document.getElementById('test').fullSheet()">تمام صفحه</button>
+        </div>
+      </main>
+    </bottom-sheet>
+  </body>
+</html>

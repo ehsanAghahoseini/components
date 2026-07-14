@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebEhsan.com - Animated Dialog</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f4f4;
+}
+
+button{
+    padding:12px 22px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+dialog{
+    margin:auto;
+    padding:24px;
+    width:420px;
+    border:none;
+    border-radius:14px;
+
+    opacity:0;
+    scale:.8;
+
+    transition:
+        opacity 400ms ease,
+        scale 400ms ease,
+        display 400ms allow-discrete,
+        overlay 400ms allow-discrete;
+}
+
+dialog[open]{
+    opacity:1;
+    scale:1;
+
+    @starting-style{
+        opacity:0;
+        scale:.8;
+    }
+}
+
+dialog::backdrop{
+    background:rgba(0,0,0,.5);
+
+    opacity:0;
+
+    transition:
+        opacity 400ms ease,
+        display 400ms allow-discrete,
+        overlay 400ms allow-discrete;
+}
+
+dialog[open]::backdrop{
+    opacity:1;
+
+    @starting-style{
+        opacity:0;
+    }
+}
+
+h2{
+    margin-bottom:12px;
+}
+
+p{
+    margin-bottom:20px;
+    line-height:1.7;
+    color:#555;
+}
+
+.close-btn{
+    background:#ef4444;
+}
+
+.close-btn:hover{
+    background:#dc2626;
+}
+</style>
+
+</head>
+<body>
+
+<button commandfor="my-modal" command="show-modal">
+    Show Modal
+</button>
+
+<dialog id="my-modal">
+
+    <h2>WEBEHSAN.COM</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Accusantium molestiae neque, magni libero beatae
+        laboriosam recusandae.
+    </p>
+
+    <button
+        class="close-btn"
+        commandfor="my-modal"
+        command="close">
+        Close
+    </button>
+
+</dialog>
+
+</body>
+</html>

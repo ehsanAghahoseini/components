@@ -40,5 +40,6 @@ img {
 select {
   width: 200px;
   height: 45px;
+  font-size: 1.5rem;
 }
 
